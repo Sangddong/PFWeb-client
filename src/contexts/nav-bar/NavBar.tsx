@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import style from "./NavBar.module.css";
 
 function NavBar() {
   const scrollToSection = (sectionId: string) => {
@@ -18,17 +19,17 @@ function NavBar() {
   };
 
   return (
-    <div id="nav-wrap">
-      <ul className="flex justify-between p-4">
+    <div className={style.nav}>
+      <ul>
         <li
-          className="text-xl font-bold w-[120px] my-auto"
+          id="main-logo"
           onClick={() => {
             scrollToSection("main-wrap");
           }}
         >
           Sangddong
         </li>
-        <li className="flex gap-8 my-auto">
+        <li>
           <p
             onClick={() => {
               scrollToSection("about-me-wrap");
@@ -65,20 +66,20 @@ function NavBar() {
             Comments
           </p>
         </li>
-        <li className="flex justify-end gap-4 my-auto w-[120px]">
+        <li>
           <Image
             src="/img/icons/mail.png"
             alt="mail"
-            width={30}
-            height={30}
+            width={35}
+            height={35}
             onClick={copyToClipBoard}
           />
           <Link href={"https://github.com/Sangddong"} target="blank">
             <Image
               src="/img/icons/github-mark-white.png"
               alt="github"
-              width={25}
-              height={25}
+              width={30}
+              height={30}
             />
           </Link>
         </li>
