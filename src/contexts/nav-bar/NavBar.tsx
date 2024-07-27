@@ -5,20 +5,65 @@ import Image from "next/image";
 import Link from "next/link";
 
 function NavBar() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const copyToClipBoard = async () => {
     await navigator.clipboard.writeText("hehe74029@gmail.com");
     alert("복사 완");
   };
+
   return (
     <div id="nav-wrap">
       <ul className="flex justify-between p-4">
-        <li className="text-xl font-bold w-[120px] my-auto">Sangddong</li>
+        <li
+          className="text-xl font-bold w-[120px] my-auto"
+          onClick={() => {
+            scrollToSection("main-wrap");
+          }}
+        >
+          Sangddong
+        </li>
         <li className="flex gap-8 my-auto">
-          <p>About Me</p>
-          <p>My Skills</p>
-          <p>Portfolio</p>
-          <p>My Sites</p>
-          <p>Comments</p>
+          <p
+            onClick={() => {
+              scrollToSection("about-me-wrap");
+            }}
+          >
+            About Me
+          </p>
+          <p
+            onClick={() => {
+              scrollToSection("my-skills-wrap");
+            }}
+          >
+            My Skills
+          </p>
+          <p
+            onClick={() => {
+              scrollToSection("portfolio-wrap");
+            }}
+          >
+            Portfolio
+          </p>
+          <p
+            onClick={() => {
+              scrollToSection("my-sites-wrap");
+            }}
+          >
+            My Sites
+          </p>
+          <p
+            onClick={() => {
+              scrollToSection("comments-wrap");
+            }}
+          >
+            Comments
+          </p>
         </li>
         <li className="flex justify-end gap-4 my-auto w-[120px]">
           <Image
