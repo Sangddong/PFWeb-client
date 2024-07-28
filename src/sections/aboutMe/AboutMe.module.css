@@ -1,0 +1,42 @@
+.inner {
+  display: flex;
+}
+
+.inner div {
+  width: 100%;
+  gap: 40px;
+}
+.inner div:nth-child(2) {
+  margin-left: 30px;
+  width: 70%;
+}
+.inner div:nth-child(2) ul li {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.inner div:nth-child(2) ul li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px white;
+  background-color: rgba(240, 248, 255, 0.1);
+}
+
+.inner div:nth-child(2) ul li p {
+  font-weight: bold;
+}
+
+.inner div:nth-child(2) ul li ul {
+  border-left: solid 1px;
+}
+.inner div:nth-child(2) ul li ul li {
+  padding: 0 10px;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+.inner div:nth-child(2) ul li ul li:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: transparent;
+}

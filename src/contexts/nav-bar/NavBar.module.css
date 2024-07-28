@@ -6,6 +6,16 @@
   left: 0;
   z-index: 100;
 }
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* 배경 블러 효과 */
+  z-index: -1; /* 텍스트와 아이콘보다 뒤에 배치 */
+}
 
 .nav ul {
   display: flex;

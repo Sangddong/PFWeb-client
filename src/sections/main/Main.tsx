@@ -37,7 +37,7 @@ function Main() {
           <li id="3d"></li>
         </ul>
         <Banner />
-        <div className={style.explore} onClick={() => scrollToSection}>
+        <div className={style.explore} onClick={() => scrollToSection()}>
           <span>explore</span>
           <div className={style.pointer}>
             <Image
