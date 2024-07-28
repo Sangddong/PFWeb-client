@@ -1,0 +1,21 @@
+.main {
+  list-style: none;
+  display: flex;
+}
+.welcome {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.welcome:nth-child(1) {
+  margin-top: 100px;
+}
+.welcome span {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+.welcome span:nth-child(1) {
+  color: transparent;
+  background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
