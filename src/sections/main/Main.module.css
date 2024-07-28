@@ -7,7 +7,7 @@
   font-weight: bolder;
 }
 .welcome:nth-child(1) {
-  margin-top: 100px;
+  margin-top: 8rem;
 }
 .welcome span {
   font-size: 3rem;
@@ -18,4 +18,19 @@
   background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
   -webkit-background-clip: text;
   background-clip: text;
+}
+.main li p {
+  font-weight: 200;
+  margin-top: 10px;
+}
+.explore {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 5rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.pointer {
+  margin-left: 10px;
 }
