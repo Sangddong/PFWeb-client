@@ -1,27 +1,31 @@
 .nav {
   background-color: transparent;
 }
+
 .nav ul {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: aqua;
 }
+
 .nav li:hover {
   cursor: pointer;
 }
+
 .nav li:nth-child(1) {
   font-size: x-large;
   font-weight: bold;
   width: 150px;
 }
-.nav li:nth-child(2) {
+
+.desktopMenu {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4px;
   margin: auto 0;
 }
-.nav li:nth-child(2) p {
+
+.desktopMenu p {
   margin: 0 15px;
   padding: 0 15px;
   position: relative;
@@ -29,7 +33,8 @@
   cursor: pointer;
   transition: color 0.3s, background-image 0.3s;
 }
-.nav li:nth-child(2) p::after {
+
+.desktopMenu p::after {
   content: "";
   position: absolute;
   width: 0;
@@ -41,22 +46,77 @@
   transition: width 0.3s ease;
 }
 
-.nav li:nth-child(2) p:hover {
+.desktopMenu p:hover {
   color: transparent;
   background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
   -webkit-background-clip: text;
   background-clip: text;
 }
-.nav li:nth-child(2) p:hover::after {
+
+.desktopMenu p:hover::after {
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.nav li:nth-child(3) {
+.desktopIcons {
   display: flex;
   justify-content: end;
   gap: 10px;
   margin: auto 0;
   width: 150px;
+}
+
+.menuIcon {
+  padding-left: 20px;
+  margin: auto 0;
+  display: none;
+}
+.menuImg {
+  height: 24px;
+}
+
+.sideBar {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 550px);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sideBarMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sideBarMenu p {
+  color: white;
+  cursor: pointer;
+}
+
+.sideBarIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 65rem) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .desktopIcons {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
 }
