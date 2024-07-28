@@ -1,0 +1,55 @@
+.banner {
+  padding: 25px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  height: 130px;
+  background-image: linear-gradient(
+    to right,
+    rgba(42, 228, 240, 0.3),
+    rgba(253, 95, 227, 0.3)
+  );
+}
+
+.banner ul {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.banner ul li {
+  margin: auto;
+}
+.banner ul li:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.banner div {
+  margin: auto 0;
+  font-size: 3.5rem;
+}
+.neon {
+  position: relative;
+  display: inline-block;
+  animation: neonPulse 4s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px #fff)
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.64))
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.56))
+      drop-shadow(0 0 5px rgba(255, 129, 238, 0.67))
+      drop-shadow(0 0 7px rgba(255, 0, 221, 0.56))
+      drop-shadow(0 0 10px rgba(255, 0, 221, 0.64));
+  }
+  50% {
+    filter: drop-shadow(0 0 2px #fff)
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.64))
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.56))
+      drop-shadow(0 0 5px rgba(129, 236, 255, 0.67))
+      drop-shadow(0 0 7px rgba(0, 191, 255, 0.56))
+      drop-shadow(0 0 10px rgba(0, 191, 255, 0.64));
+  }
+}

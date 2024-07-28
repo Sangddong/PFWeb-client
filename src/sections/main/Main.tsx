@@ -2,6 +2,7 @@ import LayoutPage from "@/components/layoutPage/LayoutPage";
 import Title from "@/components/sectionTitle/Title";
 import React from "react";
 import style from "./Main.module.css";
+import Banner from "../Banner/Banner";
 
 function Main() {
   return (
@@ -26,6 +27,7 @@ function Main() {
           </li>
           <li id="3d"></li>
         </ul>
+        <Banner />
       </LayoutPage>
     </div>
   );
