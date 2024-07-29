@@ -27,7 +27,7 @@ function Main() {
             <p>
               Hi, I’m Sanghee Park.
               <br />
-              I am a full-stack web developer based on Node.js.
+              I am a backend developer based on Node.js.
               <br />
               Let&apos;s create wonderful websites together!
               <br />

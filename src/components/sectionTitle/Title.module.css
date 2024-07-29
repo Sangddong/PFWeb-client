@@ -1,5 +1,9 @@
 .title {
+  margin: auto;
   font-weight: bolder;
   font-size: 2rem;
   color: white;
+}
+.title p {
+  margin: auto;
 }

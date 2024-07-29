@@ -2,7 +2,11 @@ import React from "react";
 import style from "./Title.module.css";
 
 const Title = ({ children }) => {
-  return <span className={style.title}>{children}</span>;
+  return (
+    <div className={style.title}>
+      <p>{children}</p>
+    </div>
+  );
 };
 
 export default Title;
