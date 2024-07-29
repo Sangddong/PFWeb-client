@@ -2,6 +2,7 @@ import LayoutPage from "@/components/layoutPage/LayoutPage";
 import Title from "@/components/sectionTitle/Title";
 import React from "react";
 import style from "./AboutMe.module.css";
+import Image from "next/image";
 
 function AboutMe() {
   return (
@@ -10,7 +11,14 @@ function AboutMe() {
         <div className={style.inner}>
           <div>
             <Title>About Me</Title>
-            <div>image-slider</div>
+            <p className={style.motion}>
+              <Image
+                src="/img/slide1.png"
+                alt="profile"
+                layout="fill"
+                objectFit="cover"
+              />
+            </p>
             <div id="introducing">
               <p>
                 안녕하세요! 개발자 박상희입니다. 저는 주로 Node.js 또는 Java를
@@ -29,7 +37,7 @@ function AboutMe() {
           <div>
             <ul>
               <li>
-                <p>information</p>
+                <p>● information</p>
                 <ul>
                   <li>이름 : 박상희</li>
                   <li>생일 : 1998.07.13</li>
@@ -37,7 +45,7 @@ function AboutMe() {
                 </ul>
               </li>
               <li>
-                <p>educated</p>
+                <p>● educated</p>
                 <ul>
                   <li>
                     <strong>상명대학교 서울캠퍼스</strong> 2017.02 - 2023.02
@@ -49,7 +57,7 @@ function AboutMe() {
                 </ul>
               </li>
               <li>
-                <p>certificated</p>
+                <p>● certificated</p>
                 <ul>
                   <li>SQLD</li>
                   <li>AIFB</li>
@@ -57,7 +65,7 @@ function AboutMe() {
                 </ul>
               </li>
               <li>
-                <p>contact</p>
+                <p>● contact</p>
                 <ul>
                   <li>e-mail : hehe74029@gmail.com</li>
                   <li>phone : 010-8641-8018</li>
