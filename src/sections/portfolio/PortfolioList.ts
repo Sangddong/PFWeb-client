@@ -1,6 +1,23 @@
-export const Sweatier = {
+export interface Link {
+  id: string;
+  link: string;
+  src: string;
+}
+
+export interface Portfolio {
+  name: string;
+  info: string;
+  image: string;
+  tech: string[];
+  role: string;
+  troubleShooting: string;
+  links: Link[];
+}
+
+export const Sweatier: Portfolio = {
   name: "Sweatier",
   info: "Sweatier는 수준별 운동 매칭을 통해 실력이 비슷한 사람들과 운동을 즐기고 사용자의 운동 수준(티어)을 평가받을 수 있는 서비스입니다.땀을 의미하는 Sweat 💧와 등급을 의미하는 Tier 🎖️를 결합해, 유저들과 함께 땀을 흘리며 당신의 운동 티어를 올려보세요!",
+  image: "",
   tech: [
     "/img/front/next.png",
     "/img/front/tailwind.png",
@@ -27,9 +44,10 @@ export const Sweatier = {
   ],
 };
 
-export const Homelog = {
+export const Homelog: Portfolio = {
   name: "Home-Log",
   info: "🏠 Home-log는 집에 초대된 손님들이 방명록을 남기고, 집 주인이 방명록을 모아볼 수 있는 서비스입니다. 집에서 만든 소중한 추억들을 한 곳에 모아 남겨보세요!✨",
+  image: "",
   tech: [
     "/img/front/next.png",
     "/img/front/tailwind.png",
@@ -37,7 +55,7 @@ export const Homelog = {
     "/img/back/nest.png",
     "/img/back/prisma.png",
     "/img/back/postgresql.png",
-    "/img/tools/docker.png",
+    "/img/deploy/docker.png",
     "/img/deploy/awsec2.png",
   ],
   role: "백엔드 - 카카오 소셜로그인 구현, 프로필 관련 로직 구현, swagger api 작성 / 프론트 - 로그인 페이지, 홈 페이지, 프로필 수정 페이지",
