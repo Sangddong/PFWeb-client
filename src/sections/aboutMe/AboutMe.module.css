@@ -60,6 +60,9 @@
 .card {
   height: 100%;
 }
+.copy {
+  cursor: pointer;
+}
 @media screen and (max-width: 65rem) {
   .inner div {
     flex-direction: column;

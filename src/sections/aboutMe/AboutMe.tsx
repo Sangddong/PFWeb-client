@@ -36,9 +36,9 @@ function AboutMe() {
                 처음 프로그래밍을 접했던 것은 대학교 재학 중 수강한 UI/UX
                 강의에서였습니다. Processing이라는 프로그램을 통해 제가 코드를
                 짜면 원하는대로 결과물이 만들어지는 것에 흥미를 느껴 개발 공부를
-                본격적으로 시작하게 되었습니다. 처음엔 눈에 보여지는 디자인에
-                흥미를 느꼈지만, 자바와 스프링을 공부하며 데이터를 정제하고
-                필요한 데이터를 가져오는 것에 재미를 느끼게 되었고
+                본격적으로 시작하게 되었습니다. 처음엔 눈에 보여지는 디자인
+                요소에 흥미를 느꼈지만, 자바와 스프링을 공부하며 데이터를
+                정제하고 필요한 데이터를 가져오는 것에 재미를 느끼게 되었고
                 데이터베이스를 공부하며 백엔드 개발자가 되기로 결심했습니다.
                 <br />
                 <br />
@@ -85,13 +85,17 @@ function AboutMe() {
             </div>
             <div className={style.card}>
               <Card miniTitle="contact">
-                <p onClick={() => copyToClipBoard("hehe74029@gmail.com")}>
+                <p
+                  onClick={() => copyToClipBoard("hehe74029@gmail.com")}
+                  className={style.copy}
+                >
                   <strong>e-mail</strong> hehe74029@gmail.com
                 </p>
                 <p
                   onClick={() => {
                     copyToClipBoard("01086418018");
                   }}
+                  className={style.copy}
                 >
                   <strong>phone</strong> 010-8641-8018
                 </p>
