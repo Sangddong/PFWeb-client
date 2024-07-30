@@ -3,10 +3,10 @@
   flex-direction: column;
 }
 .motion {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background-color: aqua;
-  animation: shapeChange 4s infinite;
+  animation: shapeChange 6s infinite;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
@@ -14,19 +14,19 @@
 
 @keyframes shapeChange {
   0% {
-    border-radius: 51% 53% 69% 31% / 46% 51% 55% 58%;
+    border-radius: 47% 53% 61% 39% / 45% 55% 45% 55%;
   }
   25% {
-    border-radius: 64% 42% 46% 57% / 64% 50% 58% 42%;
+    border-radius: 58% 42% 54% 46% / 45% 42% 58% 55%;
   }
   50% {
-    border-radius: 44% 66% 51% 54% / 62% 51% 55% 42%;
+    border-radius: 46% 54% 45% 55% / 59% 54% 46% 41%;
   }
   75% {
-    border-radius: 61% 44% 42% 62% / 59% 51% 55% 46%;
+    border-radius: 56% 44% 55% 45% / 53% 54% 46% 47%;
   }
   100% {
-    border-radius: 51% 53% 69% 31% / 46% 51% 55% 58%;
+    border-radius: 47% 53% 61% 39% / 45% 55% 45% 55%;
   }
 }
 
@@ -43,7 +43,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 .inner div div {
   width: 70%;
