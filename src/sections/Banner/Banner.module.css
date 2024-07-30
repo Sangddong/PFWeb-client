@@ -34,7 +34,7 @@
 .neon {
   position: relative;
   display: inline-block;
-  animation: neonPulse 4s infinite alternate;
+  animation: neonPulse 3s infinite alternate;
   transition: all 0.3s ease;
 }
 

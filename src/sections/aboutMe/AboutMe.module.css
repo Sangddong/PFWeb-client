@@ -5,8 +5,7 @@
 .motion {
   width: 250px;
   height: 250px;
-  background-color: aqua;
-  animation: shapeChange 6s infinite;
+  animation: shapeChange 3s infinite;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
@@ -14,7 +13,7 @@
 
 @keyframes shapeChange {
   0% {
-    border-radius: 47% 53% 61% 39% / 45% 55% 45% 55%;
+    border-radius: 39% 61% 55% 45% / 58% 39% 61% 42%;
   }
   25% {
     border-radius: 58% 42% 54% 46% / 45% 42% 58% 55%;
@@ -26,7 +25,7 @@
     border-radius: 56% 44% 55% 45% / 53% 54% 46% 47%;
   }
   100% {
-    border-radius: 47% 53% 61% 39% / 45% 55% 45% 55%;
+    border-radius: 39% 61% 55% 45% / 58% 39% 61% 42%;
   }
 }
 
@@ -70,9 +69,10 @@
 }
 
 .card p {
-  font-weight: 400;
-  font-size: large;
   margin: 10px auto;
+  color: #92a2ea;
+  font-size: large;
+  font-weight: bold;
 }
 .card ul {
   margin: auto;
