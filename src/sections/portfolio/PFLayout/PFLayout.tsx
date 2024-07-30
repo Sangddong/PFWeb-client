@@ -44,7 +44,7 @@ const PFLayout: React.FC<PFLayoutProps> = ({ portfolio }) => {
         <div>{portfolio.role}</div>
         <p>Trouble shooting</p>
         <div>{portfolio.troubleShooting}</div>
-        <p>Links</p>
+        <p>Link</p>
         <div className={style.linkWrap}>
           {portfolio.links.map((link) => (
             <Link

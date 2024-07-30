@@ -1,0 +1,39 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  width: 80%;
+  height: 85%;
+  cursor: pointer;
+}
+
+.currentSlide {
+  transform: scale(0.9);
+  z-index: 2;
+}
+
+.prevSlide,
+.nextSlide {
+  transform: scale(0.8);
+}
+
+.prevSlide {
+  left: 0;
+  opacity: 0.3;
+  /* transform: translateX(-100%); */
+}
+
+.nextSlide {
+  right: 0;
+  opacity: 0.3;
+  /* transform: translateX(100%); */
+}
