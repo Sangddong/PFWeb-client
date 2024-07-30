@@ -5,12 +5,14 @@
 
 .skillWrap {
   margin-top: 50px;
+  width: 100%;
 }
 
 .skill {
   display: grid;
   grid-template-columns: 5fr 3fr;
   gap: 30px;
+  width: 100%;
 }
 
 .skill li {
@@ -20,13 +22,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   transition: box-shadow 0.3s ease;
-}
-
-.skillKind {
-  margin: 0 auto 20px auto;
-  color: #92a2ea;
-  font-size: large;
-  font-weight: bold;
+  width: 100%;
 }
 
 .skill li:nth-child(1),
@@ -47,8 +43,8 @@
 }
 
 .imageWrapper {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   position: relative;
 }
 .imageWrapper img {
@@ -79,4 +75,11 @@
   font-size: medium;
   z-index: 1;
   margin: auto;
+}
+
+@media screen and (max-width: 65rem) {
+  .skill {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

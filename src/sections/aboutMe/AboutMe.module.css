@@ -5,7 +5,7 @@
 .motion {
   width: 250px;
   height: 250px;
-  animation: shapeChange 3s infinite;
+  animation: shapeChange 5s infinite ease-out;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
@@ -13,19 +13,19 @@
 
 @keyframes shapeChange {
   0% {
-    border-radius: 39% 61% 55% 45% / 58% 39% 61% 42%;
+    border-radius: 40% 60% 55% 45% / 60% 40% 60% 40%;
   }
   25% {
-    border-radius: 58% 42% 54% 46% / 45% 42% 58% 55%;
+    border-radius: 50% 42% 54% 46% / 45% 42% 58% 55%;
   }
   50% {
-    border-radius: 46% 54% 45% 55% / 59% 54% 46% 41%;
+    border-radius: 60% 54% 45% 55% / 60% 55% 46% 41%;
   }
   75% {
-    border-radius: 56% 44% 55% 45% / 53% 54% 46% 47%;
+    border-radius: 50% 44% 55% 45% / 45% 54% 46% 47%;
   }
   100% {
-    border-radius: 39% 61% 55% 45% / 58% 39% 61% 42%;
+    border-radius: 40% 60% 55% 45% / 60% 40% 60% 40%;
   }
 }
 
@@ -38,62 +38,28 @@
   object-fit: cover;
 }
 
-.inner div {
+.photo {
   width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: 30px;
 }
-.inner div div {
+
+.introduce {
+  margin: auto;
   width: 70%;
   font-weight: 100;
 }
 .cardWrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 3fr;
   width: 100%;
+  margin-top: 30px;
+  max-height: max-content;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  padding: 10px 30px;
-  margin: 10px 0;
-  transition: transform 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
 }
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card p {
-  margin: 10px auto;
-  color: #92a2ea;
-  font-size: large;
-  font-weight: bold;
-}
-.card ul {
-  margin: auto;
-  text-align: center;
-}
-.card:nth-child(4) ul li {
-  cursor: pointer;
-}
-.card ul li {
-  padding: 0 10px;
-  background-color: transparent;
-  transition: transform 0.3s ease;
-  font-weight: 100;
-  width: 100%;
-}
-.card ul li:hover {
-  transform: none;
-  box-shadow: none;
-  background-color: transparent;
-}
-
 @media screen and (max-width: 65rem) {
   .inner div {
     flex-direction: column;

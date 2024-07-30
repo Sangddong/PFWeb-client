@@ -4,6 +4,8 @@ import Title from "@/components/sectionTitle/Title";
 import React from "react";
 import style from "./AboutMe.module.css";
 import Image from "next/image";
+import MiniTitle from "@/components/miniTitle/MiniTitle";
+import Card from "@/components/card/Card";
 
 function AboutMe() {
   const copyToClipBoard = async (text: string) => {
@@ -15,7 +17,7 @@ function AboutMe() {
       <LayoutPage>
         <div className={style.inner}>
           <Title>About Me</Title>
-          <div>
+          <div className={style.photo}>
             <p className={style.motion}>
               <Image
                 src="/img/profile.png"
@@ -24,7 +26,7 @@ function AboutMe() {
                 objectFit="cover"
               />
             </p>
-            <div id="introducing">
+            <div className={style.introduce}>
               <p>
                 안녕하세요! 백엔드 개발자 박상희입니다. 저는 주로 Node.js 또는
                 Java를 사용하여 백엔드 시스템을 개발합니다. 백엔드 개발을 위해
@@ -46,55 +48,55 @@ function AboutMe() {
               </p>
             </div>
           </div>
-          <div>
-            <ul className={style.cardWrap}>
-              <li className={style.card}>
-                <p>information</p>
-                <ul>
-                  <li>이름 : 박상희</li>
-                  <li>생일 : 1998.07.13</li>
-                  <li>주소 : 서울 강서구</li>
-                </ul>
-              </li>
-              <li className={style.card}>
-                <p>educated</p>
-                <ul>
-                  <li>
-                    상명대학교 서울캠퍼스
-                    <br />
-                    2017.02 - 2023.02
-                  </li>
-                  <li>
-                    웅진X사람인 풀스택 웹 개발자 양성과정
-                    <br />
-                    2023.12 - 2024.03
-                  </li>
-                </ul>
-              </li>
-              <li className={style.card}>
-                <p>certificated</p>
-                <ul>
-                  <li>SQLD</li>
-                  <li>AIFB</li>
-                  <li>TOEIC 870</li>
-                </ul>
-              </li>
-              <li className={style.card}>
-                <p>contact</p>
-                <ul>
-                  <li onClick={() => copyToClipBoard("hehe74029@gmail.com")}>
-                    e-mail : hehe74029@gmail.com
-                  </li>
-                  <li
-                    onClick={() => {
-                      copyToClipBoard("01086418018");
-                    }}
-                  >
-                    phone : 010-8641-8018
-                  </li>
-                </ul>
-              </li>
-            </ul>
+          <div className={style.cardWrap}>
+            <div className={style.card}>
+              <Card miniTitle="personal-info">
+                <p>
+                  <strong>이름</strong> 박상희
+                </p>
+                <p>
+                  <strong>생일</strong> 1998.07.13
+                </p>
+                <p>
+                  <strong>주소</strong> 서울시 강서구
+                </p>
+              </Card>
+            </div>
+            <div className={style.card}>
+              <Card miniTitle="educated">
+                <p>
+                  <strong>상명대학교 서울캠퍼스</strong>
+                  <br />
+                  2017.02 - 2023.02
+                </p>
+                <p>
+                  <strong>웅진X사람인 풀스택 웹 개발자 양성과정</strong>
+                  <br />
+                  2023.12 - 2024.03
+                </p>
+              </Card>
+            </div>
+            <div className={style.card}>
+              <Card miniTitle="certificated">
+                <p>SQLD</p>
+                <p>AIFB</p>
+                <p>TOEIC 870</p>
+              </Card>
+            </div>
+            <div className={style.card}>
+              <Card miniTitle="contact">
+                <p onClick={() => copyToClipBoard("hehe74029@gmail.com")}>
+                  <strong>e-mail</strong> hehe74029@gmail.com
+                </p>
+                <p
+                  onClick={() => {
+                    copyToClipBoard("01086418018");
+                  }}
+                >
+                  <strong>phone</strong> 010-8641-8018
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </LayoutPage>
