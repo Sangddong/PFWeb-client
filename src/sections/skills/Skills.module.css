@@ -1,0 +1,82 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillWrap {
+  margin-top: 50px;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 30px;
+}
+
+.skill li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  border: solid 2px #ffe4c434;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+.skillKind {
+  margin: 0 auto 20px auto;
+}
+
+.skill li:hover {
+  box-shadow: 0 0 5px 5px #2ae4f0;
+}
+
+.skill li:nth-child(1),
+.skill li:nth-child(2) {
+  grid-column: span 2;
+}
+
+.skill li:nth-child(3),
+.skill li:nth-child(4) {
+  grid-column: span 1;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imageWrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.imageWrapper img {
+  transition: transform 0.3s ease;
+}
+.imageWrapper div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: x-small;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.imageWrapper div p {
+  margin: auto;
+}
+.imageWrapper:hover img {
+  transform: scale(1.5);
+  filter: brightness(20%) grayscale(80%);
+}
+.imageWrapper:hover div {
+  display: flex;
+  transform: scale(1.5);
+  font-size: medium;
+  z-index: 1;
+  margin: auto;
+}
