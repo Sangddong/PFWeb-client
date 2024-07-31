@@ -4,7 +4,6 @@ import Title from "@/components/sectionTitle/Title";
 import React from "react";
 import style from "./AboutMe.module.css";
 import Image from "next/image";
-import MiniTitle from "@/components/miniTitle/MiniTitle";
 import Card from "@/components/card/Card";
 
 function AboutMe() {

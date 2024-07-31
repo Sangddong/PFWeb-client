@@ -54,13 +54,15 @@ function NavBar() {
           <p onClick={() => scrollToSection("comments-wrap")}>Comments</p>
         </li>
         <li className={style.desktopIcons}>
-          <Image
-            src="/img/icons/mail.png"
-            alt="mail"
-            width={35}
-            height={35}
-            onClick={copyToClipBoard}
-          />
+          <Link href={"mailto: name@email.com"}>
+            <Image
+              src="/img/icons/mail.png"
+              alt="mail"
+              width={35}
+              height={35}
+              onClick={copyToClipBoard}
+            />
+          </Link>
           <Link href={"https://github.com/Sangddong"} target="blank">
             <Image
               src="/img/icons/github-mark-white.png"
@@ -71,7 +73,13 @@ function NavBar() {
           </Link>
         </li>
         <li className={style.menuIcon} onClick={() => setSideBar(!sideBar)}>
-          <img src="/img/menu.png" alt="menu" className={style.menuImg} />
+          <Image
+            src="/img/menu.png"
+            alt="menu"
+            layout="fill"
+            objectFit="cover"
+            className={style.menuImg}
+          />
         </li>
       </ul>
       {sideBar && (

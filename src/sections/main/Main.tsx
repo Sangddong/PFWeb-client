@@ -24,15 +24,6 @@ function Main() {
               <span>Protfolio</span>
               <span>Website</span>
             </div>
-            <p>
-              Hi, I’m Sanghee Park.
-              <br />
-              I am a backend developer based on Node.js.
-              <br />
-              Let&apos;s create wonderful websites together!
-              <br />
-              Thank you for visiting, and please hit the like button below!
-            </p>
           </li>
           <li id="3d"></li>
         </ul>
