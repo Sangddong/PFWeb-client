@@ -19,7 +19,7 @@ function NavBar() {
 
   const copyToClipBoard = async () => {
     await navigator.clipboard.writeText("hehe74029@gmail.com");
-    alert("복사 완");
+    alert("복사되었습니다!");
   };
 
   useEffect(() => {

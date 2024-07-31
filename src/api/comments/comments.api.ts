@@ -25,5 +25,6 @@ export const getTotalComment = async () => {
 export const deleteComment = async (data: DDeleteComment) => {
   const result = await server.patch("/comments", data);
   if (!result.data) throw new Error("invalid password");
+  console.log(result.data);
   return result.data;
 };

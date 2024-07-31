@@ -10,7 +10,7 @@ import Card from "@/components/card/Card";
 function AboutMe() {
   const copyToClipBoard = async (text: string) => {
     await navigator.clipboard.writeText(text);
-    alert("복사 완");
+    alert("복사 복사되었습니다");
   };
   return (
     <div id="about-me-wrap">
