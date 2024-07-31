@@ -3,6 +3,7 @@ import AboutMe from "@/sections/aboutMe/AboutMe";
 import Comments from "@/sections/comments/Comments";
 import Main from "@/sections/main/Main";
 import Portfolio from "@/sections/portfolio/Portfolio";
+import Sites from "@/sections/sites/Sites";
 import Skills from "@/sections/skills/Skills";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Portfolio />
+      <Sites />
     </>
   );
 }

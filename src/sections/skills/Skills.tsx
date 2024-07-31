@@ -4,7 +4,6 @@ import React from "react";
 import { back, deploy, front, tools } from "./skill";
 import Image from "next/image";
 import style from "./Skills.module.css";
-import MiniTitle from "@/components/miniTitle/MiniTitle";
 import Card from "@/components/card/Card";
 
 function Skills() {

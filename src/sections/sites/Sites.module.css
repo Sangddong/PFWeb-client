@@ -1,0 +1,29 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sitesWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.siteWrap {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.siteWrap:hover {
+  transform: scale(1.1);
+}
+.siteImageWrap {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  filter: drop-shadow(10px 6px 6px #00000030);
+}
+.siteWrap p {
+  margin-top: 20px;
+  line-height: normal;
+}
