@@ -18,7 +18,7 @@ export interface Portfolio {
 export const portfolios: Portfolio[] = [
   {
     name: "Sweatier",
-    info: "Sweatier는 수준별 운동 매칭을 통해 실력이 비슷한 사람들과 운동을 즐기고 사용자의 운동 수준(티어)을 평가받을 수 있는 서비스입니다.",
+    info: "💧Sweatier는 수준별 운동 매칭을 통해 실력이 비슷한 사람들과 운동을 즐기고 사용자의 운동 수준🎖️을 평가받을 수 있는 서비스입니다.",
     team: "back-3 / front-3 / designer-1",
     term: "2024.02 - 2024.03",
     image: "/img/sweatier.png",

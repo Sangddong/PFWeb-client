@@ -13,7 +13,6 @@
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   width: 80%;
   height: 85%;
-  cursor: pointer;
 }
 
 .currentSlide {
@@ -24,16 +23,14 @@
 .prevSlide,
 .nextSlide {
   transform: scale(0.8);
+  cursor: pointer;
 }
 
 .prevSlide {
   left: 0;
   opacity: 0.3;
-  /* transform: translateX(-100%); */
 }
-
 .nextSlide {
   right: 0;
   opacity: 0.3;
-  /* transform: translateX(100%); */
 }
