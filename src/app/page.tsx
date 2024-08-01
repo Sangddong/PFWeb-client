@@ -16,7 +16,7 @@ export default function Home() {
         {/* <NavBar /> */}
         <Main />
         <AboutMe />
-        {/* <Skills /> */}
+        <Skills />
         {/* <Portfolio /> */}
         {/* <Sites /> */}
         {/* <Comments /> */}
