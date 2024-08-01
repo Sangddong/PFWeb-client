@@ -17,9 +17,9 @@ export default function Home() {
         <Main />
         <AboutMe />
         <Skills />
-        {/* <Portfolio /> */}
+        <Portfolio />
         <Sites />
-        {/* <Comments /> */}
+        <Comments />
       </QueryClientProvider>
     </>
   );

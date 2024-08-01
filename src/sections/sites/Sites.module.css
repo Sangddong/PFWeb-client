@@ -32,9 +32,15 @@
   .sitesWrap {
     width: 100%;
     margin-top: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
   .siteImageWrap {
+    width: 3rem;
+    height: 3rem;
   }
-  .siteImageWrap a {
+  .siteWrap {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
   }
 }
