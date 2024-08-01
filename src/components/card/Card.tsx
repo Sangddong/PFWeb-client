@@ -9,9 +9,11 @@ interface CardProps {
 const Card = ({ miniTitle, children }: CardProps) => {
   return (
     <div className={card.cardWrap}>
-      <div className={card.miniTitle}>
-        <p>{miniTitle}</p>
-      </div>
+      {miniTitle && (
+        <div className={card.miniTitle}>
+          <p>{miniTitle}</p>
+        </div>
+      )}
       <div className={card.content}>
         {React.Children.map(children, (child, index) => (
           <div key={index}>{child}</div>

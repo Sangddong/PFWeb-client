@@ -89,7 +89,7 @@ function AboutMe() {
                   onClick={() => copyToClipBoard("hehe74029@gmail.com")}
                   className={style.copy}
                 >
-                  <Link href={"mailto: name@email.com"}>
+                  <Link href={"mailto: hehe74029gmail.com"}>
                     <strong>e-mail</strong> hehe74029@gmail.com
                   </Link>
                 </p>

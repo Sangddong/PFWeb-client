@@ -27,3 +27,14 @@
   margin-top: 20px;
   line-height: normal;
 }
+
+@media screen and (max-width: 65rem) {
+  .sitesWrap {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .siteImageWrap {
+  }
+  .siteImageWrap a {
+  }
+}
