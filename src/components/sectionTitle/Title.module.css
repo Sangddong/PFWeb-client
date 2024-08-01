@@ -5,6 +5,7 @@
 }
 .title p {
   margin: auto;
+  width: max-content;
   color: transparent;
   background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
   -webkit-background-clip: text;

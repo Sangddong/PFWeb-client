@@ -28,3 +28,13 @@
   height: 100%;
   font-weight: 100;
 }
+
+@media screen and (max-width: 65rem) {
+  .cardWrap {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .miniTitle {
+    font-size: 0.8rem;
+  }
+}

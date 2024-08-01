@@ -29,8 +29,30 @@
   justify-content: end;
   margin-top: 5rem;
   font-size: 1.2rem;
+}
+.explore span {
   cursor: pointer;
 }
 .pointer {
+  position: relative;
   margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 65rem) {
+  .welcome {
+    font-size: 1.8rem;
+  }
+  .welcome span {
+    font-size: 2.3rem;
+  }
+  .explore span {
+    font-size: 0.8rem;
+  }
+  .pointer {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 5px;
+  }
 }

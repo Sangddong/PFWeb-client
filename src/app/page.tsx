@@ -13,13 +13,13 @@ export default function Home() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <NavBar />
+        {/* <NavBar /> */}
         <Main />
         <AboutMe />
-        <Skills />
-        <Portfolio />
-        <Sites />
-        <Comments />
+        {/* <Skills /> */}
+        {/* <Portfolio /> */}
+        {/* <Sites /> */}
+        {/* <Comments /> */}
       </QueryClientProvider>
     </>
   );
