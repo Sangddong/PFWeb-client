@@ -12,68 +12,76 @@ function Skills() {
       <LayoutPage>
         <div className={style.inner}>
           <Title>My Skills</Title>
-          <div className={style.skillWrap}>
-            <Card miniTitle="Back">
-              <div className={style.imageContainer}>
-                {back.map((skill) => (
-                  <div key={skill.id} className={style.imageWrapper}>
-                    <Image
-                      src={skill.src}
-                      alt={skill.alt}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                    <div>{skill.alt}</div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-            <Card miniTitle="Front">
-              <div className={style.imageContainer}>
-                {front.map((skill) => (
-                  <div key={skill.id} className={style.imageWrapper}>
-                    <Image
-                      src={skill.src}
-                      alt={skill.alt}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                    <div>{skill.alt}</div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-            <Card miniTitle="Delpoy">
-              <div className={style.imageContainer}>
-                {deploy.map((skill) => (
-                  <div key={skill.id} className={style.imageWrapper}>
-                    <Image
-                      src={skill.src}
-                      alt={skill.alt}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                    <div>{skill.alt}</div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-            <Card miniTitle="Tools">
-              <div className={style.imageContainer}>
-                {tools.map((skill) => (
-                  <div key={skill.id} className={style.imageWrapper}>
-                    <Image
-                      src={skill.src}
-                      alt={skill.alt}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                    <div>{skill.alt}</div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </div>
+          <ul className={style.skillWrap}>
+            <li>
+              <Card miniTitle="Back">
+                <div className={style.imageContainer}>
+                  {back.map((skill) => (
+                    <div key={skill.id} className={style.imageWrapper}>
+                      <Image
+                        src={skill.src}
+                        alt={skill.alt}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                      <div>{skill.alt}</div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </li>
+            <li>
+              <Card miniTitle="Front">
+                <div className={style.imageContainer}>
+                  {front.map((skill) => (
+                    <div key={skill.id} className={style.imageWrapper}>
+                      <Image
+                        src={skill.src}
+                        alt={skill.alt}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                      <div>{skill.alt}</div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </li>
+            <li>
+              <Card miniTitle="Devops">
+                <div className={style.imageContainer}>
+                  {deploy.map((skill) => (
+                    <div key={skill.id} className={style.imageWrapper}>
+                      <Image
+                        src={skill.src}
+                        alt={skill.alt}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                      <div>{skill.alt}</div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </li>
+            <li>
+              <Card miniTitle="Tools">
+                <div className={style.imageContainer}>
+                  {tools.map((skill) => (
+                    <div key={skill.id} className={style.imageWrapper}>
+                      <Image
+                        src={skill.src}
+                        alt={skill.alt}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                      <div>{skill.alt}</div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </li>
+          </ul>
         </div>
       </LayoutPage>
     </div>

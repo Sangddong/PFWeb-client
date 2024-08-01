@@ -54,7 +54,7 @@ function NavBar() {
           <p onClick={() => scrollToSection("comments-wrap")}>Comments</p>
         </li>
         <li className={style.desktopIcons}>
-          <Link href={"mailto: name@email.com"}>
+          <Link href={"mailto: hehe74029@gmail.com"}>
             <Image
               src="/img/icons/mail.png"
               alt="mail"

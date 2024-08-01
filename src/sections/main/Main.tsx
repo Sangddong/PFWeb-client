@@ -21,21 +21,21 @@ function Main() {
           <li>
             <div className={style.welcome}>Welcome to My</div>
             <div className={style.welcome}>
-              <span>Protfolio</span>
+              <span>Portfolio</span>
               <span>Website</span>
             </div>
           </li>
           <li id="3d"></li>
         </ul>
         <Banner />
-        <div className={style.explore} onClick={() => scrollToSection()}>
-          <span>explore</span>
-          <div className={style.pointer}>
+        <div className={style.explore}>
+          <span onClick={() => scrollToSection()}>explore</span>
+          <div onClick={() => scrollToSection()} className={style.pointer}>
             <Image
               src="/img/pointer.png"
               alt="pointer"
-              width={15}
-              height={15}
+              layout="fill"
+              objectFit="contain"
             />
           </div>
         </div>

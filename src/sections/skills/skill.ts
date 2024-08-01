@@ -1,5 +1,4 @@
 export const back = [
-  { id: "node", src: "/img/back/node.png", alt: "Node.js" },
   { id: "nest", src: "/img/back/nest.png", alt: "Nest.js" },
   { id: "express", src: "/img/back/express.png", alt: "Express" },
   { id: "java", src: "/img/back/java.png", alt: "Java" },
@@ -7,8 +6,6 @@ export const back = [
   { id: "mysql", src: "/img/back/mysql.png", alt: "mySQL" },
   { id: "prisma", src: "/img/back/prisma.png", alt: "prisma" },
   { id: "typeorm", src: "/img/back/typeorm.png", alt: "typeOrm" },
-  { id: "awsrds", src: "/img/back/awsrds.png", alt: "AWS RDS" },
-  { id: "awss3", src: "/img/back/awss3.png", alt: "Aws S3" },
 ];
 
 export const front = [
@@ -24,6 +21,8 @@ export const deploy = [
   { id: "awsec2", src: "/img/deploy/awsec2.png", alt: "AWS EC2" },
   { id: "vercel", src: "/img/deploy/vercel.png", alt: "Vercel" },
   { id: "docker", src: "/img/deploy/docker.png", alt: "Docker" },
+  { id: "awsrds", src: "/img/back/awsrds.png", alt: "AWS RDS" },
+  { id: "awss3", src: "/img/back/awss3.png", alt: "Aws S3" },
 ];
 
 export const tools = [

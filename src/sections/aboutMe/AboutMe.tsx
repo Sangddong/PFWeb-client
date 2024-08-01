@@ -5,11 +5,12 @@ import React from "react";
 import style from "./AboutMe.module.css";
 import Image from "next/image";
 import Card from "@/components/card/Card";
+import Link from "next/link";
 
 function AboutMe() {
   const copyToClipBoard = async (text: string) => {
     await navigator.clipboard.writeText(text);
-    alert("복사 복사되었습니다");
+    alert("복사되었습니다");
   };
   return (
     <div id="about-me-wrap">
@@ -88,7 +89,9 @@ function AboutMe() {
                   onClick={() => copyToClipBoard("hehe74029@gmail.com")}
                   className={style.copy}
                 >
-                  <strong>e-mail</strong> hehe74029@gmail.com
+                  <Link href={"mailto: hehe74029gmail.com"}>
+                    <strong>e-mail</strong> hehe74029@gmail.com
+                  </Link>
                 </p>
                 <p
                   onClick={() => {

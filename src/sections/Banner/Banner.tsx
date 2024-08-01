@@ -20,7 +20,6 @@ function Banner() {
       const totalViewResult = await getTotalView();
       setTodayView(todayViewResult.data.todayView);
       setTotalView(totalViewResult.data.totalView);
-      console.log(todayViewResult);
 
       //댓글
       const totalComments = await getTotalComment();

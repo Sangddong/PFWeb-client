@@ -53,6 +53,7 @@
 .cardWrap {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr 3fr;
+  gap: 20px;
   width: 100%;
   margin-top: 30px;
   max-height: max-content;
@@ -75,8 +76,14 @@
     width: 150px;
     height: 150px;
   }
+  .introduce {
+    font-size: 0.8rem;
+  }
   .cardWrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+    padding-top: 10px;
+    display: flex;
   }
 }
