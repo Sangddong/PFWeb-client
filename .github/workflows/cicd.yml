@@ -32,17 +32,14 @@ jobs:
           EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
         run: |
           sudo apt-get update
-          sudo apt-get install -y awscli
-
-          sudo apt-get install -y openssh-client
-
+          sudo apt-get install -y awscli openssh-client
+      
           echo "$EC2_SSH_KEY" > /tmp/ec2_key.pem
           chmod 600 /tmp/ec2_key.pem
-
-          aws ec2-instance-connect send-ssh-public-key \
-            --instance-id $EC2_INSTANCE_ID \
-            --availability-zone $(aws ec2 describe-instances --instance-ids $EC2_INSTANCE_ID --query "Reservations[0].Instances[0].Placement.AvailabilityZone" --output text) \
-            --instance-os-user ubuntu \
-            --ssh-public-key file:///tmp/ec2_key.pem
-
-          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@$(aws ec2 describe-instances --instance-ids $EC2_INSTANCE_ID --query "Reservations[0].Instances[0].PublicIpAddress" --output text) 'bash -s' < /home/ubuntu/deploy.sh
+      
+          INSTANCE_PUBLIC_IP=$(aws ec2 describe-instances \
+            --instance-ids $EC2_INSTANCE_ID \
+            --query "Reservations[0].Instances[0].PublicIpAddress" \
+            --output text)
+      
+          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@$INSTANCE_PUBLIC_IP 'bash -s' < /home/ubuntu/deploy.sh
