@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./Banner.module.css";
 import Image from "next/image";
-import { getTodayView, getTotalView } from "@/api/view/view.api";
+import { getView } from "@/api/view/view.api";
 import { getTotalComment } from "@/api/comments/comments.api";
 import { cancelLike, getLikes, like } from "@/api/likes/likes.api";
 
@@ -16,10 +16,12 @@ function Banner() {
   useEffect(() => {
     const fetchData = async () => {
       //조회수
-      const todayViewResult = await getTodayView();
-      const totalViewResult = await getTotalView();
-      setTodayView(todayViewResult.data.todayView);
-      setTotalView(totalViewResult.data.totalView);
+      const viewData = await getView();
+      const todayViewResult = await viewData.todayView;
+      const totalViewResult = await viewData.totalView;
+
+      setTodayView(todayViewResult);
+      setTotalView(totalViewResult);
 
       //댓글
       const totalComments = await getTotalComment();
