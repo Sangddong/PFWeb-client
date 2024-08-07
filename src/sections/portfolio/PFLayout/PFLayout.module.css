@@ -47,3 +47,10 @@
   position: relative;
   overflow: hidden;
 }
+
+@media screen and (max-width: 65rem) {
+  .pfLayoutWrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
