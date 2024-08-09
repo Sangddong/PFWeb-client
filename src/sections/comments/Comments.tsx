@@ -74,18 +74,18 @@ function Comments() {
                   className={index % 2 === 1 ? style.odd : style.even}
                 >
                   <div className={style.commentsDetail}>
-                    <span className={style.nickname}>{comment.nickname}</span>
-                    <span className={style.content}>{comment.content}</span>
-                    <span className={style.createdAt}>
+                    <div className={style.nickname}>{comment.nickname}</div>
+                    <div className={style.content}>{comment.content}</div>
+                    <div className={style.createdAt}>
                       {comment.createdAt.substring(0, 10)}{" "}
                       {comment.createdAt.substring(11, 19)}
-                    </span>
-                    <span
+                    </div>
+                    <div
                       className={style.delete}
                       onClick={() => onHandleModalStatus(comment.id)}
                     >
                       x
-                    </span>
+                    </div>
                   </div>
                 </div>
               ))}
