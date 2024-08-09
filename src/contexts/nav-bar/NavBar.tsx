@@ -23,8 +23,8 @@ function NavBar() {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sideBarRef.current && !sideBarRef.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (sideBarRef.current && !sideBarRef.current.contains(e.target)) {
         setSideBar(false);
       }
     };
@@ -36,30 +36,29 @@ function NavBar() {
   }, []);
 
   return (
-    <div className={style.nav}>
-      <ul>
+    <div className={sideBar ? style.sideBar : style.nav} ref={sideBarRef}>
+      <ul className={sideBar ? style.sideBarWrap : style.navWrap}>
         <li
-          id="main-logo"
           onClick={() => {
             scrollToSection("main-wrap");
           }}
         >
           Sangddong
         </li>
-        <li className={style.desktopMenu}>
+        <li className={sideBar ? style.sidebarMenu : style.navMenu}>
           <p onClick={() => scrollToSection("about-me-wrap")}>About Me</p>
           <p onClick={() => scrollToSection("my-skills-wrap")}>My Skills</p>
           <p onClick={() => scrollToSection("portfolio-wrap")}>Portfolio</p>
           <p onClick={() => scrollToSection("my-sites-wrap")}>My Sites</p>
           <p onClick={() => scrollToSection("comments-wrap")}>Comments</p>
         </li>
-        <li className={style.desktopIcons}>
+        <li className={sideBar ? style.sideBarIcons : style.navIcons}>
           <Link href={"mailto: hehe74029@gmail.com"}>
             <Image
               src="/img/icons/mail.png"
               alt="mail"
-              width={35}
-              height={35}
+              width={30}
+              height={30}
               onClick={copyToClipBoard}
             />
           </Link>
@@ -67,49 +66,18 @@ function NavBar() {
             <Image
               src="/img/icons/github-mark-white.png"
               alt="github"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
             />
           </Link>
         </li>
-        <li className={style.menuIcon} onClick={() => setSideBar(!sideBar)}>
-          <Image
-            src="/img/menu.png"
-            alt="menu"
-            layout="fill"
-            objectFit="cover"
-            className={style.menuImg}
-          />
+        <li
+          className={sideBar ? style.navButton : style.sideBarButton}
+          onClick={() => setSideBar(!sideBar)}
+        >
+          <Image src="/img/menu.png" alt="menu" width={4} height={20} />
         </li>
       </ul>
-      {sideBar && (
-        <div className={style.sideBar} ref={sideBarRef}>
-          <div className={style.sideBarMenu}>
-            <p onClick={() => scrollToSection("about-me-wrap")}>About Me</p>
-            <p onClick={() => scrollToSection("my-skills-wrap")}>My Skills</p>
-            <p onClick={() => scrollToSection("portfolio-wrap")}>Portfolio</p>
-            <p onClick={() => scrollToSection("my-sites-wrap")}>My Sites</p>
-            <p onClick={() => scrollToSection("comments-wrap")}>Comments</p>
-          </div>
-          <div className={style.sideBarIcons}>
-            <Image
-              src="/img/icons/mail.png"
-              alt="mail"
-              width={35}
-              height={35}
-              onClick={copyToClipBoard}
-            />
-            <Link href={"https://github.com/Sangddong"} target="blank">
-              <Image
-                src="/img/icons/github-mark-white.png"
-                alt="github"
-                width={30}
-                height={30}
-              />
-            </Link>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Portfolio } from "../PortfolioList";
 import style from "./PFSlider.module.css";
 import PFLayout from "../PFLayout/PFLayout";
+import Image from "next/image";
 
 interface SliderProps {
   portfolios: Portfolio[];
@@ -11,7 +12,7 @@ interface SliderProps {
 const PFSlider: React.FC<SliderProps> = ({ portfolios }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleSlideClick = (direction: "prev" | "next") => {
+  const handleSlideClick = (direction: "prev" | "next", scroll?: true) => {
     setCurrentIndex((prevIndex) =>
       direction === "prev"
         ? prevIndex === 0
@@ -24,27 +25,26 @@ const PFSlider: React.FC<SliderProps> = ({ portfolios }) => {
   };
 
   const currentPortfolio = portfolios[currentIndex];
-  const prevPortfolio =
-    portfolios[(currentIndex - 1 + portfolios.length) % portfolios.length];
-  const nextPortfolio = portfolios[(currentIndex + 1) % portfolios.length];
 
   return (
     <div className={style.slider}>
-      <div
-        className={`${style.slide} ${style.prevSlide}`}
+      <Image
+        src="/img/prev.png"
+        alt="prev"
+        width={40}
+        height={40}
         onClick={() => handleSlideClick("prev")}
-      >
-        <PFLayout portfolio={prevPortfolio} />
-      </div>
-      <div className={`${style.slide} ${style.currentSlide}`}>
-        <PFLayout portfolio={currentPortfolio} />
-      </div>
-      <div
-        className={`${style.slide} ${style.nextSlide}`}
+        className={style.btn}
+      />
+      <PFLayout portfolio={currentPortfolio} />
+      <Image
+        src="/img/next.png"
+        alt="prev"
+        width={40}
+        height={40}
         onClick={() => handleSlideClick("next")}
-      >
-        <PFLayout portfolio={nextPortfolio} />
-      </div>
+        className={style.btn}
+      />
     </div>
   );
 };

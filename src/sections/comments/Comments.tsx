@@ -63,9 +63,9 @@ function Comments() {
           <Title>Comments</Title>
           <div className={style.comments}>
             <div className={style.commentsDetail}>
-              <div>nickname</div>
-              <div>content</div>
-              <div>created at</div>
+              <div className={style.commentsInfo}>nickname</div>
+              <div className={style.commentsInfo}>content</div>
+              <div className={style.commentsInfo}>created at</div>
             </div>
             {data &&
               data.map((comment: DComment, index: number) => (
@@ -74,18 +74,18 @@ function Comments() {
                   className={index % 2 === 1 ? style.odd : style.even}
                 >
                   <div className={style.commentsDetail}>
-                    <span className={style.nickname}>{comment.nickname}</span>
-                    <span className={style.content}>{comment.content}</span>
-                    <span className={style.createdAt}>
+                    <div className={style.nickname}>{comment.nickname}</div>
+                    <div className={style.content}>{comment.content}</div>
+                    <div className={style.createdAt}>
                       {comment.createdAt.substring(0, 10)}{" "}
                       {comment.createdAt.substring(11, 19)}
-                    </span>
-                    <span
+                    </div>
+                    <div
                       className={style.delete}
                       onClick={() => onHandleModalStatus(comment.id)}
                     >
                       x
-                    </span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -94,12 +94,16 @@ function Comments() {
             {pages &&
               pages.map((page: number, index: number) => (
                 <div key={index} className={style.page}>
-                  <p
-                    onClick={() => onHandlePage(page || 1)}
-                    className={currentPage === page ? style.onPage : ""}
-                  >
-                    {page}
-                  </p>
+                  {page === 0 ? (
+                    <div>첫번째 댓글을 입력해주세요 (~ ^ ▿ ^ )~</div>
+                  ) : (
+                    <p
+                      onClick={() => onHandlePage(page || 1)}
+                      className={currentPage === page ? style.onPage : ""}
+                    >
+                      {page}
+                    </p>
+                  )}
                 </div>
               ))}
           </div>

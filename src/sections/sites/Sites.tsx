@@ -13,23 +13,21 @@ function Sites() {
       <LayoutPage>
         <div className={style.inner}>
           <Title>My Sites</Title>
-          <div className={style.sitesWrap}>
+          <div className={style.siteList}>
             {SitesList.map((site) => (
-              <div className={style.siteWrap} key={site.id}>
-                <Card>
-                  <div className={style.siteImageWrap}>
-                    <Link href={site.link} target="blank">
-                      <Image
-                        src={site.src}
-                        alt={site.id}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </Link>
-                  </div>
-                  <p>{site.content}</p>
-                </Card>
-              </div>
+              <Card key={site.id}>
+                <div className={style.site}>
+                  <Link href={site.link} target="blank">
+                    <Image
+                      src={site.src}
+                      alt={site.id}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </Link>
+                </div>
+                <p>{site.content}</p>
+              </Card>
             ))}
           </div>
         </div>

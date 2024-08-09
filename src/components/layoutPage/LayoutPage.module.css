@@ -12,5 +12,6 @@
 @media screen and (max-width: 65rem) {
   .innerLayout {
     width: 85%;
+    padding-top: 3rem;
   }
 }

@@ -3,44 +3,21 @@
   flex-direction: column;
   align-items: center;
 }
-.sitesWrap {
+.siteList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   width: 70%;
-  margin-top: 50px;
+  margin-top: 45px;
 }
-
-.siteWrap {
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-.siteWrap:hover {
-  transform: scale(1.1);
-}
-.siteImageWrap {
+.site {
   position: relative;
-  width: 7rem;
-  height: 7rem;
-  filter: drop-shadow(10px 6px 6px #00000030);
+  width: 70px;
+  height: 70px;
 }
-.siteWrap p {
-  margin-top: 20px;
-  line-height: normal;
-}
-
 @media screen and (max-width: 65rem) {
-  .sitesWrap {
+  .siteList {
     width: 100%;
-    margin-top: 50px;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .siteImageWrap {
-    width: 3rem;
-    height: 3rem;
-  }
-  .siteWrap {
-    margin-bottom: 5px;
-    font-size: 0.8rem;
   }
 }
