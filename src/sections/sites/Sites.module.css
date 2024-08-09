@@ -3,28 +3,21 @@
   flex-direction: column;
   align-items: center;
 }
-.sitesWrap {
+.siteList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   width: 70%;
-  margin-top: 50px;
+  margin-top: 45px;
 }
-
-.siteWrap {
-  margin: 10px;
-  transition: transform 0.3s ease;
+.site {
+  position: relative;
+  width: 70px;
+  height: 70px;
 }
-.siteWrap:hover {
-  transform: scale(1.1);
-}
-.siteWrap p {
-  margin-top: 20px;
-  line-height: normal;
-}
-
 @media screen and (max-width: 65rem) {
-  .siteWrap {
-    margin-bottom: 5px;
-    font-size: 0.8rem;
+  .siteList {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
 }
