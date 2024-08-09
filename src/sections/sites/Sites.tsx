@@ -17,16 +17,14 @@ function Sites() {
             {SitesList.map((site) => (
               <div className={style.siteWrap} key={site.id}>
                 <Card>
-                  <div className={style.siteImageWrap}>
-                    <Link href={site.link} target="blank">
-                      <Image
-                        src={site.src}
-                        alt={site.id}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </Link>
-                  </div>
+                  <Link href={site.link} target="blank">
+                    <Image
+                      src={site.src}
+                      alt={site.id}
+                      width={100}
+                      height={50}
+                    />
+                  </Link>
                   <p>{site.content}</p>
                 </Card>
               </div>

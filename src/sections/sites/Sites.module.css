@@ -11,17 +11,11 @@
 }
 
 .siteWrap {
-  margin-bottom: 20px;
+  margin: 10px;
   transition: transform 0.3s ease;
 }
 .siteWrap:hover {
   transform: scale(1.1);
-}
-.siteImageWrap {
-  position: relative;
-  width: 7rem;
-  height: 7rem;
-  filter: drop-shadow(10px 6px 6px #00000030);
 }
 .siteWrap p {
   margin-top: 20px;
@@ -29,16 +23,6 @@
 }
 
 @media screen and (max-width: 65rem) {
-  .sitesWrap {
-    width: 100%;
-    margin-top: 50px;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .siteImageWrap {
-    width: 3rem;
-    height: 3rem;
-  }
   .siteWrap {
     margin-bottom: 5px;
     font-size: 0.8rem;
