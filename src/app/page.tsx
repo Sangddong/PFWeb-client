@@ -19,7 +19,7 @@ export default function Home() {
         <Skills />
         <Portfolio />
         <Sites />
-        <Comments />
+        {/* <Comments /> */}
       </QueryClientProvider>
     </>
   );

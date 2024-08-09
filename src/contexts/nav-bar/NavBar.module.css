@@ -16,31 +16,26 @@
   backdrop-filter: blur(10px);
   z-index: -1;
 }
-
-.nav ul {
+.navWrap {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
 }
-
 .nav li:hover {
   cursor: pointer;
 }
-
 .nav li:nth-child(1) {
   font-size: x-large;
   font-weight: bold;
   width: 150px;
 }
-
-.desktopMenu {
+.navMenu {
   display: flex;
   justify-content: space-between;
   gap: 4px;
   margin: auto 0;
 }
-
-.desktopMenu p {
+.navMenu p {
   margin: 0 15px;
   padding: 0 15px;
   position: relative;
@@ -48,8 +43,7 @@
   cursor: pointer;
   transition: color 0.3s, background-image 0.3s;
 }
-
-.desktopMenu p::after {
+.navMenu p::after {
   content: "";
   position: absolute;
   width: 0;
@@ -60,81 +54,98 @@
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
-
-.desktopMenu p:hover {
+.navMenu p:hover {
   color: transparent;
   background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
   -webkit-background-clip: text;
   background-clip: text;
 }
-
-.desktopMenu p:hover::after {
+.navMenu p:hover::after {
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
-
-.desktopIcons {
+.navIcons {
   display: flex;
   justify-content: end;
   gap: 10px;
   margin: auto 0;
   width: 150px;
 }
-
-.menuIcon {
-  padding-left: 20px;
-  margin: auto 0;
+.navButton {
   display: none;
-}
-.menuImg {
-  height: 24px;
 }
 
 .sideBar {
-  right: 0;
+  background-color: transparent;
   width: 100%;
-  height: calc(100vh - 550px);
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .sideBar::before {
-  backdrop-filter: blur(10px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
   z-index: -1;
 }
-
+.sideBarWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-bottom: solid 1px white;
+}
+.sideBarWrap li:nth-child(1) {
+  font-size: large;
+  font-weight: bold;
+  width: 100px;
+}
+.sideBarWrap li:nth-child(2) {
+  margin: 20px auto;
+  text-align: center;
+}
+.sideBarWrap li:nth-child(2) p {
+  padding: 10px 0;
+}
 .sideBarMenu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.sideBarMenu p {
-  color: white;
-  cursor: pointer;
+  margin: auto;
+  display: none;
 }
 
 .sideBarIcons {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto 20px auto;
   gap: 20px;
+  display: none;
+}
+.sideBarButton {
+  padding-left: 50px;
+  margin: auto 0;
+  display: none;
 }
 
-/* 반응형 */
 @media screen and (max-width: 65rem) {
-  .desktopMenu {
+  .navMenu,
+  .navIcons {
     display: none;
   }
-
-  .desktopIcons {
-    display: none;
+  .nav li:nth-child(1) {
+    font-size: large;
   }
 
-  .menuIcon {
+  .sideBarButton {
     display: block;
+  }
+  .sideBarMenu,
+  .sideBarIcons {
+    display: flex;
   }
 }
