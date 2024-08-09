@@ -94,12 +94,16 @@ function Comments() {
             {pages &&
               pages.map((page: number, index: number) => (
                 <div key={index} className={style.page}>
-                  <p
-                    onClick={() => onHandlePage(page || 1)}
-                    className={currentPage === page ? style.onPage : ""}
-                  >
-                    {page}
-                  </p>
+                  {page === 0 ? (
+                    <div>첫번째 댓글을 입력해주세요 (~ ^ ▿ ^ )~</div>
+                  ) : (
+                    <p
+                      onClick={() => onHandlePage(page || 1)}
+                      className={currentPage === page ? style.onPage : ""}
+                    >
+                      {page}
+                    </p>
+                  )}
                 </div>
               ))}
           </div>

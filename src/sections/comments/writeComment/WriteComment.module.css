@@ -19,8 +19,12 @@
 
 @media screen and (max-width: 65rem) {
   .info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     font-size: 0.8rem;
+  }
+  .info input:nth-child(3),
+  .info button {
+    grid-column: 1/-1;
   }
   .info input,
   .info button {

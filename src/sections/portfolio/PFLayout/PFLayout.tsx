@@ -14,7 +14,7 @@ const PFLayout: React.FC<PFLayoutProps> = ({ portfolio }) => {
       <div className={style.pfImage}>
         <Image
           src={portfolio.image}
-          alt={`${portfolio.name} image`}
+          alt={portfolio.name}
           layout="fill"
           objectFit="cover"
         />

@@ -34,10 +34,6 @@ function WriteComment() {
     },
   });
 
-  const onHandleModalStatus = (id: string) => {
-    setModal(!modal);
-  };
-
   const onHandleSubmit = async () => {
     if (!nickname.trim() || !password.trim() || !content.trim()) {
       alert("모든 필드를 채워주세요!");

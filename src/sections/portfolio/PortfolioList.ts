@@ -52,7 +52,7 @@ export const portfolios: Portfolio[] = [
     info: "🏠 Home-log는 집에 초대된 손님들이 방명록을 남기고, 집 주인이 방명록을 모아볼 수 있는 서비스입니다. 집에서 만든 소중한 추억들을 한 곳에 모아보세요!✨",
     team: "full stack - 2",
     term: "2024.05 - 2024.07",
-    image: "/img/slide1.png",
+    image: "/img/homelog.png",
     tech: [
       "/img/front/next.png",
       "/img/front/tailwind.png",
