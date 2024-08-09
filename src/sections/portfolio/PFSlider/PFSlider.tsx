@@ -22,10 +22,6 @@ const PFSlider: React.FC<SliderProps> = ({ portfolios }) => {
         ? 0
         : prevIndex + 1
     );
-    if (scroll) {
-      const section = document.getElementById("portfolio-wrap");
-      section.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   const currentPortfolio = portfolios[currentIndex];
@@ -49,22 +45,6 @@ const PFSlider: React.FC<SliderProps> = ({ portfolios }) => {
         onClick={() => handleSlideClick("next")}
         className={style.btn}
       />
-      <div className={style.slideButtons}>
-        <Image
-          src="/img/prev.png"
-          alt="prev"
-          width={20}
-          height={20}
-          onClick={() => handleSlideClick("prev", true)}
-        />
-        <Image
-          src="/img/next.png"
-          alt="prev"
-          width={20}
-          height={20}
-          onClick={() => handleSlideClick("next", true)}
-        />
-      </div>
     </div>
   );
 };
