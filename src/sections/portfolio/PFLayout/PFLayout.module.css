@@ -52,6 +52,9 @@
   .pfLayoutWrap {
     font-size: 0.8rem;
     gap: 0;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-radius: 10px;
   }
   .pfLayoutWrap {
     display: block;
@@ -65,5 +68,8 @@
   .image {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  .pfImage {
+    border-radius: 5px;
   }
 }

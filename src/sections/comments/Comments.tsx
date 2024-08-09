@@ -63,9 +63,9 @@ function Comments() {
           <Title>Comments</Title>
           <div className={style.comments}>
             <div className={style.commentsDetail}>
-              <div>nickname</div>
-              <div>content</div>
-              <div>created at</div>
+              <div className={style.commentsInfo}>nickname</div>
+              <div className={style.commentsInfo}>content</div>
+              <div className={style.commentsInfo}>created at</div>
             </div>
             {data &&
               data.map((comment: DComment, index: number) => (

@@ -4,8 +4,9 @@
   gap: 10px;
 }
 .info input {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   padding: 5px 0 0 10px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
 }
 .info button {
   background-color: rgba(255, 255, 255, 0.1);
@@ -13,5 +14,16 @@
 }
 
 .info button:hover {
-  background-image: linear-gradient(to right, #2ae4f0, #fd5fe3);
+  background-image: linear-gradient(to right, #2ae3f02a, #fd5fe32a);
+}
+
+@media screen and (max-width: 65rem) {
+  .info {
+    grid-template-columns: 1fr;
+    font-size: 0.8rem;
+  }
+  .info input,
+  .info button {
+    height: 40px;
+  }
 }

@@ -9,6 +9,7 @@ function WriteComment() {
   const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
   const [content, setContent] = useState("");
+  const [modal, setModal] = useState(false);
 
   const nicknameChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     setNickname(e.target.value);
@@ -33,6 +34,10 @@ function WriteComment() {
     },
   });
 
+  const onHandleModalStatus = (id: string) => {
+    setModal(!modal);
+  };
+
   const onHandleSubmit = async () => {
     if (!nickname.trim() || !password.trim() || !content.trim()) {
       alert("모든 필드를 채워주세요!");
@@ -42,43 +47,41 @@ function WriteComment() {
   };
 
   return (
-    <div className={style.layout}>
-      <div className={style.info}>
-        <input
-          id="nickname"
-          title="nickname"
-          placeholder="닉네임을 입력해주세요"
-          value={nickname}
-          onChange={nicknameChangeHandler}
-          minLength={1}
-          maxLength={10}
-          className={style.nickname}
-        />
-        <input
-          id="password"
-          title="password"
-          type="password"
-          placeholder="비밀번호를 입력해주세요"
-          value={password}
-          onChange={passwordChangeHandler}
-          minLength={1}
-          maxLength={10}
-          className={style.password}
-        />
-        <input
-          id="content"
-          title="content"
-          placeholder="댓글을 입력해주세요"
-          value={content}
-          onChange={contentChangeHandler}
-          minLength={1}
-          maxLength={50}
-          className={style.content}
-        />
-        <button type="submit" onClick={onHandleSubmit}>
-          작성 완료
-        </button>
-      </div>
+    <div className={style.info}>
+      <input
+        id="nickname"
+        title="nickname"
+        placeholder="닉네임을 입력해주세요"
+        value={nickname}
+        onChange={nicknameChangeHandler}
+        minLength={1}
+        maxLength={10}
+        className={style.nickname}
+      />
+      <input
+        id="password"
+        title="password"
+        type="password"
+        placeholder="비밀번호를 입력해주세요"
+        value={password}
+        onChange={passwordChangeHandler}
+        minLength={1}
+        maxLength={10}
+        className={style.password}
+      />
+      <input
+        id="content"
+        title="content"
+        placeholder="댓글을 입력해주세요"
+        value={content}
+        onChange={contentChangeHandler}
+        minLength={1}
+        maxLength={50}
+        className={style.content}
+      />
+      <button type="submit" onClick={onHandleSubmit}>
+        작성 완료
+      </button>
     </div>
   );
 }

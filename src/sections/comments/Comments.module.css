@@ -4,7 +4,6 @@
 }
 .comments {
   width: 100%;
-  height: 340px;
   margin: 30px 0;
 }
 .commentsDetail {
@@ -12,7 +11,7 @@
   grid-template-columns: 7fr 32fr 8fr 1fr;
   padding: 5px 10px;
 }
-.commentsDetail div {
+.commentsInfo {
   text-align: center;
   font-weight: bold;
 }
@@ -38,7 +37,9 @@
 .delete:hover {
   transform: scale(1.5);
 }
-.content,
+.content {
+  font-weight: 300;
+}
 .createdAt,
 .delete {
   font-weight: 100;
@@ -75,4 +76,33 @@
   border-radius: 5px;
   font-weight: bold;
   font-size: small;
+}
+
+@media screen and (max-width: 65rem) {
+  .inner {
+    font-size: 0.8rem;
+  }
+  .commentsInfo {
+    display: none;
+  }
+  .commentsDetail {
+    order: 1;
+    display: grid;
+    grid-template-columns: 5fr 7fr 1fr;
+    margin: 0;
+  }
+  .commentsDetail span:nth-child(1) {
+    order: 1;
+  }
+  .commentsDetail span:nth-child(2) {
+    order: 4;
+    margin-top: 5px;
+    grid-column: 1/-1;
+  }
+  .commentsDetail span:nth-child(3) {
+    order: 2;
+  }
+  .commentsDetail span:nth-child(4) {
+    order: 3;
+  }
 }
