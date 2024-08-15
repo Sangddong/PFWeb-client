@@ -6,9 +6,8 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
@@ -23,35 +22,16 @@ jobs:
 
       - name: Build
         run: npm run build
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: "Configure AWS Credentials"
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ap-northeast-2
+          role-to-assume: arn:aws:iam::891376949084:role/ec2-full-access
+          
 
-      - name: Prepare SSH Key
-        run: |
-          echo "$EC2_SSH_KEY" > /tmp/ec2_key.pem
-          chmod 600 /tmp/ec2_key.pem
-          # Debug: Verify key file creation
-          ls -l /tmp/ec2_key.pem
-          file /tmp/ec2_key.pem
 
-      - name: Retrieve EC2 instance IP and check SSH
-        run: |
-          INSTANCE_PUBLIC_IP=$(aws ec2 describe-instances \
-            --instance-ids $EC2_INSTANCE_ID \
-            --query "Reservations[0].Instances[0].PublicIpAddress" \
-            --output text)
-          echo "Instance Public IP: $INSTANCE_PUBLIC_IP"
-
-          if [ -z "$INSTANCE_PUBLIC_IP" ]; then
-            echo "Error: Unable to retrieve EC2 instance public IP address."
-            exit 1
-          fi
-
-          set -x
-          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@$INSTANCE_PUBLIC_IP 'echo "SSH connection successful"'
-          set +x
-
-      - name: Deploy to EC2
-        run: |
-          echo "Starting deployment script transfer"
-          scp -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem /home/ubuntu/deploy.sh ubuntu@$INSTANCE_PUBLIC_IP:/home/ubuntu/deploy.sh
-          echo "Transfer complete, executing deployment script"
-          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@$INSTANCE_PUBLIC_IP 'bash -s' < /home/ubuntu/deploy.sh
