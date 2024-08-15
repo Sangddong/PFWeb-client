@@ -40,7 +40,7 @@ jobs:
         
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps: 
       - uses: actions/checkout@v3
       
@@ -49,6 +49,18 @@ jobs:
         with:
           role-to-assume: ${{secrets.AWS_ARN}}
           aws-region: ap-northeast-2
+
+      - name: Verify Docker Login
+        run: |
+          echo ${{secrets.GHCR_TOKEN}} | sudo docker login ghcr.io -u ${{github.actor}} --password-stdin
           
-
-
+      - name: Docker run
+        run: |
+          sudo docker stop pfweb-client-container || true
+          sudo docker rm pfweb-client-container || true
+          sudo docker rmi ghcr.io/sangddong/pfweb-client-image:latest || true
+          sudo docker run -d -p 80:3000 \
+          --name pfweb-client-container \
+          --restart always \
+          -e PORT=${{ secrets.PORT }} \
+          ghcr.io/sangddong/pfweb-client-image:latest
