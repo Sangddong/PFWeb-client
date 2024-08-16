@@ -4,16 +4,14 @@ import React from "react";
 import style from "./Main.module.css";
 import Banner from "../Banner/Banner";
 import Image from "next/image";
+import { server } from "@/api";
 
 function Main() {
   const scrollToSection = () => {
     const section = document.getElementById("about-me-wrap");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
-  const server = process.env.NEXT_PUBLIC_API_URL;
-  console.log(server);
+
   return (
     <div id="main-wrap">
       <LayoutPage>
@@ -23,7 +21,7 @@ function Main() {
             <div className={style.welcome}>
               <span>Portfolio</span>
               <span>Website</span>
-              <span>{server}</span>
+              {/* <span>{server}</span> */}
             </div>
           </li>
           <li id="3d"></li>
