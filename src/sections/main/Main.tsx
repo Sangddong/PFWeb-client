@@ -22,7 +22,6 @@ function Main() {
             <div className={style.welcome}>
               <span>Portfolio</span>
               <span>Website</span>
-              <span>{server}</span>
             </div>
           </li>
           <li id="3d"></li>
