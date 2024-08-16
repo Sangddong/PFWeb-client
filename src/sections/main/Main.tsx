@@ -13,7 +13,7 @@ function Main() {
     }
   };
   const server = process.env.NEXT_PUBLIC_API_URL;
-
+  console.log(server);
   return (
     <div id="main-wrap">
       <LayoutPage>
