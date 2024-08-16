@@ -13,8 +13,6 @@ function Main() {
     }
   };
 
-  console.log('server: ', server);
-
   return (
     <div id="main-wrap">
       <LayoutPage>
