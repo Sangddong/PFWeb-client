@@ -12,8 +12,9 @@ function Main() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const server = process.env.NEXT_PUBLIC_API_URL;
-  console.log(server);
+
+  console.log('server: ', server);
+
   return (
     <div id="main-wrap">
       <LayoutPage>
