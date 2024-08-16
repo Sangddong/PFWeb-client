@@ -55,6 +55,8 @@ jobs:
           echo ${{secrets.GHCR_TOKEN}} | sudo docker login ghcr.io -u ${{github.actor}} --password-stdin
           
       - name: Docker run
+        env: 
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
         run: |
           sudo docker stop pfweb-client-container || true
           sudo docker rm pfweb-client-container || true
@@ -62,5 +64,4 @@ jobs:
           sudo docker run -d -p 80:3000 \
           --name pfweb-client-container \
           --restart always \
-          -e NEXT_PUBLIC_API_URL=${{secrets.NEXT_PUBLIC_API_URL}} \
           ghcr.io/sangddong/pfweb-client-image:latest
