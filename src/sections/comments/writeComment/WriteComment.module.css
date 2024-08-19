@@ -26,4 +26,8 @@
   .info input {
     height: 40px;
   }
+  .info button {
+    height: 40px;
+    border-radius: 10px;
+  }
 }
